@@ -32,7 +32,7 @@ class AcademiaModule {
             console.log(`DATE=${date} TIME=${time} NAME=${given_name}`)
 
             try {
-                reservar(props, date_parsed, time_parsed)
+                await reservar(props, date_parsed, time_parsed)
                 conv.ask('Pronto, foi reservado !')
             } catch (e) {
                 conv.ask('Ocorreu um erro ao solicitar a reserva. Tenta novamente mais tarde !')
@@ -40,7 +40,7 @@ class AcademiaModule {
         })
     }
 
-    reservar(props, date, time) {
+    async reservar(props, date, time) {
         const browser = await puppeteer.launch({headless: true})
         const page = (await browser.pages()).shift()
         await page.setViewport({width: 1366, height: 768})
