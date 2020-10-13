@@ -5,8 +5,11 @@ class AcademiaModule {
         this.app = app
 
         // Reservar academia
-        app.intent('Academia', async (conv, {date, time, given_name}) => {
-            console.log(`DATE=$date TIME=$time NAME=${given_name}`)
+        app.intent('Academia', async (conv, params) => {
+            const { date, time } = params
+            const given_name = params["given-name"]
+
+            console.log(`DATE=${date} TIME=${time} NAME=${given_name}`)
 
             conv.ask('Pronto !')
         })
