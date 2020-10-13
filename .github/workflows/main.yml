@@ -22,6 +22,5 @@ jobs:
         
     - name: Deploy to Cloud Functions
       run: |
-        gcloud alpha functions add-iam-policy-binding webhook --region=us-central1 --member=allUsers --role=roles/cloudfunctions.invoker --quiet
         gcloud functions deploy webhook --trigger-http --allow-unauthenticated --runtime nodejs12 --region us-central1 --set-env-vars=FIREBASE_CONFIG="{}",GCLOUD_PROJECT=${{ secrets.GCLOUD_PROJECT_ID }}
       working-directory: functions
