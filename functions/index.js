@@ -9,7 +9,7 @@ const CasamentoModule = require('./modules/casamento')
 const Intl = require('intl')
 
 // Criar app
-const app = dialogflow({debug: true})
+const app = dialogflow({debug: false})
 
 // Academia
 new AcademiaModule(app)
