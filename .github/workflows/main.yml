@@ -22,4 +22,4 @@ jobs:
         
     - name: Deploy to Cloud Functions
       run: gcloud functions deploy webhook --trigger-http --allow-unauthenticated --runtime nodejs12 --region us-central1
-      
+      working-directory: functions
