@@ -35,6 +35,7 @@ class AcademiaModule {
                 await reservar(props, date_parsed, time_parsed)
                 conv.ask('Pronto, foi reservado !')
             } catch (e) {
+                console.error(e)
                 conv.ask('Ocorreu um erro ao solicitar a reserva. Tenta novamente mais tarde !')
             }
         })
