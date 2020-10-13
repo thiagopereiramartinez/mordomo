@@ -3,6 +3,7 @@
 */
 const functions = require('firebase-functions')
 const { dialogflow } = require('actions-on-google')
+const AcademiaModule = require('./modules/academia')
 const RivotrilModule = require('./modules/rivotril')
 const GatosModule = require('./modules/gatos')
 const CasamentoModule = require('./modules/casamento')
@@ -10,6 +11,9 @@ const Intl = require('intl')
 
 // Criar app
 const app = dialogflow({debug: true})
+
+// Academia
+new AcademiaModule(app)
 
 // Rivotril
 new RivotrilModule(app)

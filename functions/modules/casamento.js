@@ -10,7 +10,7 @@ class CasamentoModule {
       const now = new Date()
       now.setHours(now.getHours() - 4)
 
-      const dia_casamento = new Date(2020, 9, 24)
+      const dia_casamento = new Date(2021, 3, 10)
       const diff = Math.abs(dia_casamento.getTime() - now.getTime())
       const dias = Math.ceil(diff / (1000 * 60 * 60 * 24))
 
