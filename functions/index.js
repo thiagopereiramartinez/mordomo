@@ -1,7 +1,6 @@
 /*
   Mr. Mordomo Fulfillment
 */
-const functions = require('firebase-functions')
 const { dialogflow } = require('actions-on-google')
 const AcademiaModule = require('./modules/academia')
 const RivotrilModule = require('./modules/rivotril')
@@ -33,4 +32,4 @@ app.intent('Hoje', (conv) => {
   conv.ask('Mais alguma coisa, mestre ?')
 })
 
-exports.webhook = functions.https.onRequest(app)
+exports.webhook = app
