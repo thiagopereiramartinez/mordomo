@@ -29,8 +29,6 @@ class AcademiaModule {
                 return
             }
 
-            console.log(`DATE=${date} TIME=${time} NAME=${given_name}`)
-
             try {
                 const browser = await puppeteer.launch({headless: true})
 
@@ -49,15 +47,14 @@ class AcademiaModule {
                 await page.waitForTimeout(3000)
 
                 const reservasPage = (await browser.pages()).pop()
-                console.log(`http://reservas.smartfit.com.br/klasses?date=${date_parsed.getYear() + 1900}-${date_parsed.getMonth() + 1}-${date_parsed.getDate()}&location_acronym=MTCGOI1&utf8=%E2%9C%93`)
                 await reservasPage.goto(`http://reservas.smartfit.com.br/klasses?date=${date_parsed.getYear() + 1900}-${date_parsed.getMonth() + 1}-${date_parsed.getDate()}&location_acronym=MTCGOI1&utf8=%E2%9C%93`, {waitUntil: 'networkidle2'})
                 await reservasPage.waitForSelector('.Card__item')
 
-                const [button] = await reservasPage.$x(`//div[contains(@class, "Card__item") and contains(., "${date_parsed.getDate()}/${date_parsed.getMonth() + 1} ${time_parsed.getHours()}:${time_parsed.getMinutes()}")]/div[3]/a`)
+                const [button] = await reservasPage.$x(`//div[contains(@class, "Card__item") and contains(., "${date_parsed.getDate()}/${date_parsed.getMonth() + 1} ${time_parsed.getHours() - 4}:${time_parsed.getMinutes()}")]/div[3]/a`)
                 await button.click()
 
-                await browser.close()
-                conv.ask('Pronto, foi reservado !')
+                //await browser.close()
+                conv.ask(`Pronto, foi reservado para o ${given_name} !`)
             } catch (e) {
                 console.error(e)
                 conv.ask('Ocorreu um erro ao solicitar a reserva. Tenta novamente mais tarde !')
