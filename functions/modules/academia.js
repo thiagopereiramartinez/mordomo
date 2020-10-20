@@ -49,6 +49,7 @@ class AcademiaModule {
                 await page.waitForTimeout(3000)
 
                 const reservasPage = (await browser.pages()).pop()
+                console.log(`http://reservas.smartfit.com.br/klasses?date=${date_parsed.toLocaleDateString()}&location_acronym=MTCGOI1&utf8=%E2%9C%93`)
                 await reservasPage.goto(`http://reservas.smartfit.com.br/klasses?date=${date_parsed.toLocaleDateString()}&location_acronym=MTCGOI1&utf8=%E2%9C%93`, {waitUntil: 'networkidle2'})
                 await reservasPage.waitForSelector('.Card__item')
 
