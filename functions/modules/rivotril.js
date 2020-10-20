@@ -73,13 +73,13 @@ class RivotrilModule {
           new Intl.DateTimeFormat('pt-BR', {
             month: 'numeric',
             day: 'numeric'
-          }).format(reg.timestamp.toDate())
+          }).format(date)
         }</say-as> às <say-as interpret-as="time" format="hms24">${
           new Intl.DateTimeFormat('pt-BR', {
             hour: 'numeric',
             minute: 'numeric',
             hour12: false
-          }).format(reg.timestamp.toDate())
+          }).format(date)
         }</say-as>.</speak>`)
         conv.ask('Mais alguma coisa, mestre ?')
       })

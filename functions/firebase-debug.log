@@ -1,0 +1,58 @@
+[debug] [2020-10-20T01:35:12.986Z] ----------------------------------------------------------------------
+[debug] [2020-10-20T01:35:12.988Z] Command:       /usr/local/Cellar/node/14.3.0_1/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2020-10-20T01:35:12.988Z] CLI Version:   8.12.1
+[debug] [2020-10-20T01:35:12.988Z] Platform:      darwin
+[debug] [2020-10-20T01:35:12.988Z] Node Version:  v14.3.0
+[debug] [2020-10-20T01:35:12.990Z] Time:          Mon Oct 19 2020 21:35:12 GMT-0400 (Horário Padrão do Amazonas)
+[debug] [2020-10-20T01:35:12.990Z] ----------------------------------------------------------------------
+[debug] [2020-10-20T01:35:12.990Z] 
+[debug] [2020-10-20T01:35:13.001Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-20T01:35:13.002Z] > authorizing via signed-in user
+[debug] [2020-10-20T01:35:13.002Z] [iam] checking project masterdeveloper-mordomo for permissions ["firebase.projects.get"]
+[debug] [2020-10-20T01:35:13.004Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-10-20T01:35:13.004Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-10-20T01:35:13.405Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Tue, 20 Oct 2020 01:35:13 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-20T01:35:13.422Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/masterdeveloper-mordomo:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-10-20T01:35:14.484Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 20 Oct 2020 01:35:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=722","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "14" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"8\" doesn't match your global version \"14\""}}
+[debug] [2020-10-20T01:35:14.501Z] defaultcredentials: writing to file /Users/thiago/.config/firebase/thiago_pereira.ti_gmail.com_application_default_credentials.json
+[debug] [2020-10-20T01:35:14.503Z] DEBUG: Setting GAC to /Users/thiago/.config/firebase/thiago_pereira.ti_gmail.com_application_default_credentials.json
+[debug] [2020-10-20T01:35:14.512Z] [functions] Watching "/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions" for Cloud Functions...
+[debug] [2020-10-20T01:35:14.523Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-20T01:35:14.523Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-10-20T01:35:14.524Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-20T01:35:14.524Z] DEBUG: [worker-~diagnostic~-ae684361-75c3-4c60-b88b-13df01606fca]: Assigning socketPath: /var/folders/jz/8n8ctg8x3s1fzz6f8p4vmqdr0000gn/T/fire_emu_40557.sock
+[debug] [2020-10-20T01:35:14.525Z] DEBUG: [worker-~diagnostic~-ae684361-75c3-4c60-b88b-13df01606fca]: BUSY
+[debug] [2020-10-20T01:35:14.832Z] DEBUG: [runtime-status] [40557] Functions runtime initialized. {"cwd":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions","node_version":"14.3.0"}
+[debug] [2020-10-20T01:35:14.833Z] DEBUG: [runtime-status] [40557] Disabled runtime features: undefined
+[debug] [2020-10-20T01:35:14.837Z] DEBUG: [runtime-status] [40557] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-20T01:35:14.838Z] DEBUG: [runtime-status] [40557] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-20T01:35:14.840Z] DEBUG: [runtime-status] [40557] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-20T01:35:14.841Z] DEBUG: [runtime-status] [40557] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-20T01:35:14.842Z] DEBUG: [runtime-status] [40557] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-20T01:35:14.886Z] DEBUG: [runtime-status] [40557] Checked functions.config() {"config":{}}
+[debug] [2020-10-20T01:35:14.886Z] DEBUG: [runtime-status] [40557] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-20T01:35:14.886Z] DEBUG: [runtime-status] [40557] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-20T01:35:14.887Z] DEBUG: [runtime-status] [40557] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-20T01:35:14.888Z] DEBUG: [runtime-status] [40557] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-20T01:35:14.888Z] DEBUG: [runtime-status] [40557] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/node_modules/firebase-admin/lib/index.js"}}
+[warn] ⚠  Error: Cannot find module 'puppeteer'
+Require stack:
+- /Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/modules/academia.js
+- /Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1029:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:898:27)
+    at Module.require (internal/modules/cjs/loader.js:1089:19)
+    at require (internal/modules/cjs/helpers.js:73:18)
+    at Object.<anonymous> (/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/modules/academia.js:1:19)
+    at Module._compile (internal/modules/cjs/loader.js:1200:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)
+    at Module.load (internal/modules/cjs/loader.js:1049:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:937:14)
+    at Module.require (internal/modules/cjs/loader.js:1089:19) {"metadata":{"emulator":{"name":"functions"},"message":"Error: Cannot find module 'puppeteer'\nRequire stack:\n- /Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/modules/academia.js\n- /Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/index.js\n- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1029:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:898:27)\n    at Module.require (internal/modules/cjs/loader.js:1089:19)\n    at require (internal/modules/cjs/helpers.js:73:18)\n    at Object.<anonymous> (/Users/thiago/Projetos/Mordomo/MordomoDialogFlow/functions/modules/academia.js:1:19)\n    at Module._compile (internal/modules/cjs/loader.js:1200:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1220:10)\n    at Module.load (internal/modules/cjs/loader.js:1049:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:937:14)\n    at Module.require (internal/modules/cjs/loader.js:1089:19)"}}
+[warn] ⚠  We were unable to load your functions code. (see above) {"metadata":{"emulator":{"name":"functions"}}}
+[debug] [2020-10-20T01:35:15.685Z] DEBUG: [worker-~diagnostic~-ae684361-75c3-4c60-b88b-13df01606fca]: exited
+[debug] [2020-10-20T01:35:15.685Z] DEBUG: [worker-~diagnostic~-ae684361-75c3-4c60-b88b-13df01606fca]: FINISHED
