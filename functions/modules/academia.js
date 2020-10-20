@@ -29,6 +29,8 @@ class AcademiaModule {
                 return
             }
 
+            conv.ask(`Pronto, foi a solicitação de reserva para o ${given_name} !`)
+
             try {
                 const browser = await puppeteer.launch({headless: true})
 
@@ -53,8 +55,9 @@ class AcademiaModule {
                 const [button] = await reservasPage.$x(`//div[contains(@class, "Card__item") and contains(., "${date_parsed.getDate()}/${date_parsed.getMonth() + 1} ${time_parsed.getHours() - 4}:${time_parsed.getMinutes()}")]/div[3]/a`)
                 await button.click()
 
-                //await browser.close()
-                conv.ask(`Pronto, foi reservado para o ${given_name} !`)
+                await browser.close()
+
+                return
             } catch (e) {
                 console.error(e)
                 conv.ask('Ocorreu um erro ao solicitar a reserva. Tenta novamente mais tarde !')
